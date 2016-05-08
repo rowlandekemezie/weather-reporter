@@ -4,6 +4,8 @@ module.exports = {
         "react"
     ],
     "rules": {
+      "no-confusing-arrow": [2, {"allowParens": false}],
+      "arrow-body-style": ["error", "always"],
       "comma-dangle": 0,               // disallow trailing commas in object literals
       "no-cond-assign": 1,             // disallow assignment in conditional expressions
       "no-console": 0,                 // disallow use of console (off by default in the node environment)
