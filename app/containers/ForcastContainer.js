@@ -9,12 +9,15 @@ class ForcastContainer extends React.Component {
       isLoading: true
     };
   }
+
   componentDidMount() {
     console.log('Mounted');
     api.GetWeatherForcast(this.props.routeParams.city)
-      .then(data => { console.log(JSON.stringify(data.data.city));
+      .then(data => { data.data.list.map(day => {
+        return this.props.weatherInfo.push(JSON.stringify([day.dt, day.weather[0].icon, day.weather[0].description]));
+      });
         this.setState({
-          isLoading: false
+          isLoading: false,
         });
       });
   }
@@ -22,9 +25,15 @@ class ForcastContainer extends React.Component {
     return (
       <Forcast
         isLoading={this.state.isLoading}
+        weatherInfo={this.props.weatherInfo}
+        city={this.props.routeParams.city}
       />
     );
   }
 }
+
+ForcastContainer.defaultProps = {
+  weatherInfo: []
+};
 
 export default ForcastContainer;
