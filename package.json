@@ -9,6 +9,7 @@
     "react": "^15.0.2",
     "react-dom": "^15.0.2",
     "react-router": "^2.4.0",
+    "react-time": "^4.0.2",
     "style-loader": "^0.13.1"
   },
   "devDependencies": {
@@ -22,11 +23,12 @@
     "eslint-config-airbnb": "^8.0.0",
     "eslint-plugin-react": "^5.0.1",
     "html-webpack-plugin": "^2.16.1",
+    "react-time": "^4.0.2",
     "webpack": "^1.13.0",
     "webpack-dev-server": "^1.14.1"
   },
   "scripts": {
-    "start": "webpack-dev-server",
+    "start": "webpack-dev-server --progress --colors",
     "pro": "webpack -p"
   },
   "repository": {
