@@ -8,7 +8,7 @@ const routes = (
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
       <IndexRoute component={Home} />
-      <Route path="forcast/:city" header="The forcast route" component={ForcastContainer} />
+      <Route path="forcast/:city" header="The forcast" component={ForcastContainer} />
     </Route>
   </Router>
 );
